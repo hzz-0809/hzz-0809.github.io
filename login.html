@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>用户登录</title>
+    <link rel="stylesheet" href="css/loginStyle.css">
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/login.js"></script>
+</head>
+<body>
+    <!--登录图标-->
+    <div class="loginButton">
+        <img src="images/login-w-icon.png">
+    </div>
+    <!--登录框-->
+    <div class="loginContainer">
+        <div class="close"></div>
+        <h1>Login</h1>
+            <form action="">
+                <div class="userName">
+                    <i class="icon1"></i>
+                    <input type="text" placeholder="UserName" id="userName">
+                </div>
+                <div class="passWord">
+                    <i class="icon2"></i>
+                    <input type="password" placeholder="PassWord" id="passWord">
+                </div>
+                <input type="submit" value="登录" id="button">
+            </form>
+        <!--注册-->
+        <span class="registerButton">新用户/注册</span>
+    </div>
+    <!--注册框-->
+    <div class="registerContainer">
+        <div class="return"></div>
+        <div class="close2"></div>
+        <h1>Register</h1>
+        <form action="">
+            <div class="yourName">
+                <label>姓&nbsp;名：</label>
+                <input type="text" placeholder="yourName" id="yourName">
+            </div>
+            <div class="college">
+                <label>学&nbsp;院：</label>
+                <input type="text" placeholder="college" id="college">
+            </div>
+            <div class="studentID">
+                <label>学&nbsp;号：</label>
+                <input type="text" placeholder="studentID" id="studentID">
+            </div>
+            <div class="class">
+                <label>班&nbsp;级：</label>
+                <input type="text" placeholder="class" id="class">
+            </div>
+            <div class="sex">
+                <label>性&nbsp;别：</label>
+                <select name="sex" id="sex">
+                    <option value="1">男</option>
+                    <option value="2">女</option>
+                </select>
+            </div>
+            <div class="address">
+                <label>家庭住址：</label>
+                <input type="text" placeholder="address" id="address">
+            </div>
+            <div class="phone">
+                <label>手机号：</label>
+                <input type="text" placeholder="phone" id="phone">
+            </div>
+            <div class="IDType">
+                <label>证件类型：</label>
+                <select name="IDType" id="IDTye">
+                    <option value="1">居民身份证</option>
+                    <option value="2">临时居民身份证</option>
+                    <option value="3">香港、澳门地区居民的港澳居民来往内地通行证</option>
+                    <option value="4">台湾地区居民的台湾居民来往大陆通行证</option>
+                </select>
+            </div>
+            <div class="ID">
+                <label>身份证号：</label>
+                <input type="text" placeholder="ID" id="ID">
+            </div>
+            <div class="yourPassWord">
+                <label>密&nbsp;码：</label>
+                <input type="password" placeholder="ownPassWord" id="ownPassWord">
+            </div>
+            <input type="submit" value="注册" id="register">
+        </form>
+    </div>
+</body>
+</html>
