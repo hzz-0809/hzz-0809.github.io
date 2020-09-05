@@ -1,0 +1,330 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    height:100%;
+    background: #0fb8ad;
+    overflow: hidden;
+}
+body{
+    transform-style: preserve-3d;
+    perspective: 2000px;
+    position: relative;
+}
+h1, p, li{
+    font-family:'Montserrat', helvetica, arial, sans-serif;
+    font-weight: 700;
+    color:#484A56;
+    margin:0 0 1em;
+}
+section li{
+    margin:0 0 10px;
+}
+h1{
+    font-size:2.5em;
+    margin: 50px 130px;
+}
+p{
+    font-size:1em;
+    line-height:1.5em;
+}
+.wrapper{
+    overflow:hidden;
+}
+section{
+    padding:10px 30px 30px 80px;
+    -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -moz-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -o-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+nav{
+    position:fixed;
+    z-index: 99;
+    top:0;
+    left:0;
+    width:250px;
+    height:100%;
+    margin:0 0 0 -250px;
+    -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -moz-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -o-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+nav ul{
+    width:200px;
+    height:100%;
+    padding:0 0 0 50px;
+    margin:0;
+    list-style:none;
+    background:#FFF9A5;
+    overflow:hidden;
+}
+nav li{
+    margin:0;
+}
+nav a{
+    color:#484A56;
+    font-size:1em;
+    font-family:'Montserrat', helvetica, arial, sans-serif;
+    font-weight: 400;
+    text-decoration:none;
+    display:block;
+    padding:12px 15px;
+    font-weight:300;
+    letter-spacing:2px;
+}
+nav a:hover{
+    background:#EAEBED;
+}
+label{
+    display:block;
+    font-family:'helvetica neue', helvetica, arial, sans-serif;
+    font-weight:700;
+    line-height:42px;
+    color:#fff;
+    text-align:center;
+    font-size:2em;
+    line-height:1.1em;
+    position:fixed;
+    top:50px;
+    left:60px;
+    -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -moz-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -o-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+    z-index:500;
+}
+input[type="checkbox"]{
+    display:none;
+}
+input[type="checkbox"]:checked ~ nav{
+    margin:0 0 0 -50px;
+}
+input[type="checkbox"]:checked ~ label{
+    left:270px;
+}
+input[type="checkbox"]:checked ~ section{
+    -webkit-transform:translate3d(210px, 0, 0);
+    -moz-transform:translate3d(210px, 0, 0);
+    -o-transform:translate3d(210px, 0, 0);
+    transform:translate3d(210px, 0, 0);
+}
+svg {
+    transform: scale(1.5);
+}
+.index,.dailyPunch,.scheduleTrack,.information{
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: #E86252;
+    float: left;
+    margin-right: 10px;
+}
+#chips {
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 15px;
+}
+#burger {
+    display:block;
+}
+.index{
+    background: url('../images/主页.png') no-repeat;
+    background-size: 100% 100%;
+}
+.dailyPunch{
+    background: url("../images/打卡签到.png") no-repeat;
+    background-size: 100% 100%;
+}
+.scheduleTrack{
+    background: url("../images/轨迹.png") no-repeat;
+    background-size: 100% 100%;
+}
+.information{
+    background: url("../images/个人信息.png") no-repeat;
+    background-size: 100% 100%;
+}
+
+/*内容*/
+.head1{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    background: url("../images/小黄人.png");
+    background-size: 100% 100%;
+}
+#info1{
+    position: absolute;
+    width: 500px;
+    height: 560px;
+    background: sandybrown;;
+    top: 57%;
+    left: 45%;
+    margin-top: -280px;
+    margin-left: -250px;
+    z-index: 2;
+    transition: all 800ms;
+    transform-origin: 0 50%;
+    box-shadow: 10px 10px 10px gray;
+}
+#info2{
+    position: absolute;
+    width: 500px;
+    height: 560px;
+    background: skyblue;
+    top: 60%;
+    right: 45%;
+    margin-top: -280px;
+    margin-right: -250px;
+    z-index: 1;
+    transition: all 800ms;
+    transform-origin: 100% 50%;
+}
+#switch_icon1{
+    width: 30px;
+    height: 30px;
+    background: url("../images/切换1.png");
+    background-size: 100% 100%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+#switch_icon1:hover{
+    opacity: 1;
+}
+#switch_icon2{
+    width: 30px;
+    height: 30px;
+    background: url("../images/切换2.png");
+    background-size: 100% 100%;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+#switch_icon2:hover{
+    opacity: 1;
+}
+h3{
+    width: 100%;
+    height: 30px;
+    font-size: 24px;
+    font-family: "华文行楷";
+    text-align: center;
+    line-height: 30px;
+    margin-top: 20px;
+}
+#info1 h3{
+    color: #333;
+    border-bottom: 2px solid #333;
+}
+#info2 h3{
+    color: white;
+    border-bottom: 2px solid white;
+}
+.id1,.studentID1,.address1,.body,.condition{
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 199px;
+    margin-top: 20px;
+}
+.contact,.date1{
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+
+}
+#info1 input{
+    height: 100%;
+    outline: none;
+    border: none;
+    float: left;
+    background: rgba(255,255,255,0.5);
+    border-radius: 15px;
+    padding-left: 10px;
+}
+.contact input,.date1 input{
+    width: 180px;
+}
+#info1 span,#info2 span{
+    font-family: "华文行楷";
+    float: left;
+}
+.update1,.update2,.update3,.update4,.update5,.update6,.update7{
+    width: 20px;
+    height: 20px;
+    background: url("../images/更新1.png");
+    background-size: 100% 100%;
+    float: left;
+    margin-left: 10px;
+    transition: all 1s;
+    margin-top: 5px;
+}
+.btn{
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -75px;
+    border-radius: 15px;
+    background: black;
+}
+#submit1,#submit2{
+    width: 100%;
+    height: 100%;
+}
+#submit1:hover{
+    background: palevioletred;
+}#submit2:hover{
+     background: palevioletred;
+ }
+.id2,.studentID2,.temperature,.address2,.date2{
+    width: 300px;
+    height: 30px;
+    line-height: 30px;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.update2_1,.update2_2,.update2_3,.update2_4,.update2_5{
+    width: 20px;
+    height: 20px;
+    background: url("../images/更新2.png");
+    background-size: 100% 100%;
+    float: left;
+    margin-left: 10px;
+    transition: all 1s;
+    margin-top: 5px;
+}
+#info2 input{
+    height: 100%;
+    outline: none;
+    border: none;
+    float: left;
+    background: rgba(0,0,0,0.4);
+    border-radius: 15px;
+    padding-left: 10px;
+    color: white;
+}
+#info2 span{
+    color: white;
+}
+.head2{
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
+    background: url("../images/小黄人2.png");
+    background-size: 100% 100%;
+}

@@ -1,0 +1,320 @@
+#holder{
+    width: 800px;
+    height: 500px;
+    position: absolute;
+    left: 50%;
+    top: -228px;
+    margin-left: -400px;
+    transform: scale(0.25,0.25);
+    z-index: 1;
+}
+div.viewport {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    bottom: 180px;
+}
+
+@keyframes toleftR{
+    0%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(-254px)
+    }
+}
+
+@keyframes toleftO{
+    0%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(-188px)
+    }
+}
+
+@keyframes toleftG{
+    0%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(-130px)
+    }
+}
+
+@keyframes toleftB{
+    0%{
+        transform: translateX(0)
+    }
+    100%{
+        transform: translateX(-62px)
+    }
+}
+.hexagon {
+    position: absolute;
+    background-color: hsl(355, 95%, 53%);
+    text-align: center;
+    top: 263px;
+    left: 594px;
+    z-index: 1;
+    animation-duration: 0.96s;
+    animation-name: updownR;
+}
+.hexagon.dude, .hexagon.dude::before, .hexagon.dude::after {
+    width: 32px;
+    height: 53px;
+    border-width: 2px 0 2px 0;
+    border-style: solid;
+}
+.hexagon::before {
+    background-color: inherit;
+    content: "";
+    position: absolute;
+    transform: translateY(-2px) rotate(-60deg);
+    z-index: 1;
+    top: 0;
+    left: 0;
+    border-color: inherit;
+}
+.hexagon::after {
+    background-color: inherit;
+    content: "";
+    position: absolute;
+    transform: translateY(-2px) rotate(60deg);
+    z-index: -1;
+    top: 0;
+    left: 0;
+    border-color: inherit;
+}
+.box {
+    top: 210px;
+    left: 490px;
+    position: absolute;
+    width: 27px;
+    height: 23px;
+    background-color: hsl(22, 90%, 50%);
+
+    z-index: 0;
+    border-color: hsl(0, 0%, 30%);
+    animation-duration: 1.44s;
+    animation-name: updownO;
+}
+
+.box .face {
+    width: 16px;
+    height: 0;
+    border-bottom: 3px solid;
+    position: absolute;
+    z-index: 5;
+    top: 11px;
+    left: 32px;
+    border-color: inherit;
+}
+.box:before {
+    width: 16px;
+    height: 23px;
+    position: absolute;
+    content: "";
+    top: -2px;
+    right: -16px;
+    background: inherit;
+    border: inherit;
+}
+
+.box .face:after, .box .face:before {
+    content: "";
+    position:absolute;
+    width: 0;
+    height: 0;
+    border-color: inherit;
+    border: 2px solid;
+    border-radius: 50%;
+    top: -6px;
+    border-color: inherit;
+}
+
+.box .face:before{
+    left: -4px;
+}
+
+.box .face:after{
+    left: 3px;
+}
+.dude {
+    position: absolute;
+    border: 2px solid;
+    padding: 0;
+    z-index: 2;
+    border-top-color: hsl(0, 0%, 20%);
+    border-bottom-color: hsl(0, 0%, 20%);
+    border-right-color: hsl(0, 0%, 20%);
+    border-left-color: hsl(0, 0%, 20%);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.rectangle {
+    left: 411px;
+    top: 302px;
+    width: 21px;
+    height: 12px;
+    background: hsl(120, 65%, 55%);
+    animation-duration: .48s;
+    animation-name: updownG;
+}
+.rectangle .face {
+    position: absolute;
+    top: 7px;
+    left: 18px;
+    border-top: 3px solid;
+    height: 0;
+    width: 12px;
+    border-color: inherit;
+}
+.rectangle .face:after {
+    position: absolute;
+    content: "";
+    border-top: 2px solid;
+    border-left: 2px solid;
+    width: 1px;
+    height: 1px;
+    border-color: inherit;
+    top: -8px;
+    left: -1px;
+}
+.circle.dude {
+    top: 277px;
+    left: 355px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: hsl(200, 86%, 60%);
+    animation-duration: .24s;
+    animation-name: updownB;
+}
+.circle .face {
+    position: absolute;
+    left: 16px;
+    top: 8px;
+    width: 17px;
+    border-top: 2px solid;
+    border-color: inherit;
+    z-index: 7;
+}
+.circle .face:after {
+    border-top: 2px solid;
+    border-color: inherit;
+    width: 17px;
+    top: -1px;
+    content: "";
+    position: absolute;
+    transform-origin: 0 0;
+    transform: rotateZ(8deg);
+}
+.circle .face:before {
+    position: absolute;
+    content: "";
+    border-top: 2px solid;
+    border-left: 2px solid;
+    width: 1px;
+    height: 1px;  border-color: inherit;
+    top: -7px;
+    left: -4px;
+    border-radius: 50%;
+}
+
+.hexagon .face {
+    position: absolute;
+    border-top: 3px solid;
+    border-color: inherit;
+    left: 8px;
+    top: 8px;
+    width: 26px;
+    z-index: 2;
+}
+
+.hexagon .face:after {
+    position: absolute;
+    content: "";
+    border-width: 0 3px 3px 0;
+    border-style: solid;
+    border-color: inherit;
+    width: 8px;
+    height: 21px;
+    left: 12px;
+    transform: skewX(11deg);
+}
+
+.red-legs{
+    position: absolute;
+    right: 73px;
+    bottom: -20px;
+}
+
+.orange-legs{
+    position: absolute;
+    right: 110px;
+    bottom: -20px;
+}
+
+@keyframes updownR {
+    0%{
+        transform: translateY(0px);
+        animation-timing-function: cubic-bezier(0,.50,.50,1);
+    }
+    50%{
+        transform: translateY(-96px);
+        animation-timing-function: cubic-bezier(.50,0,1,.50) ;
+    }
+}
+
+@keyframes updownO {
+    0%{
+        transform: translateY(0px);
+        animation-timing-function: cubic-bezier(0.585, 0.240, 0.865, 0.445);
+    }
+    25%{
+        transform: translateY(75px) rotateZ(90deg);
+        animation-timing-function: cubic-bezier(0.070, 0.405, 0.400, 0.820);
+    }
+    50%{
+        transform: translateY(0px) rotateZ(180deg);
+        animation-timing-function: cubic-bezier(0.585, 0.240, 0.865, 0.445);
+    }
+    75%{
+        transform: translateY(75px) rotateZ(270deg);
+        animation-timing-function: cubic-bezier(0.070, 0.405, 0.400, 0.820);
+    }
+    100%{
+        transform: translateY(0px) rotateZ(360deg);
+        animation-timing-function: cubic-bezier(0.585, 0.240, 0.865, 0.445);
+    }
+}
+
+@keyframes updownG {
+    0%{
+        transform: translateY(0px) skewX(-25deg) scale(0.8,1.8);
+        animation-timing-function: cubic-bezier(0,.50,.50,1);
+    }
+    50%{
+        transform: translateY(-50px);
+        animation-timing-function: cubic-bezier(.50,0,1,.50) ;
+    }
+    100%{
+        transform: translateY(0px) skewX(25deg) scale(0.8,1.8);
+    }
+}
+
+@keyframes updownB {
+    0%{
+        transform: translateY(0px);
+        animation-timing-function: cubic-bezier(.50,0,1,.50);
+    }
+    50%{
+        transform: translateY(25px) scale(1.2,1);
+        animation-timing-function: cubic-bezier(0,.50,.50,1);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}

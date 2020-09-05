@@ -1,0 +1,377 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body, html{
+    height:100%;
+    background: #0fb8ad;
+}
+body{
+    padding:0;
+    margin:0;
+}
+h1, p, li{
+    font-family:'Montserrat', helvetica, arial, sans-serif;
+    font-weight: 700;
+    color:#484A56;
+    margin:0 0 1em;
+}
+section li{
+    margin:0 0 10px;
+}
+h1{
+    font-size:2.5em;
+    margin: 50px 130px;
+}
+p{
+    font-size:1em;
+    line-height:1.5em;
+}
+.wrapper{
+    overflow:hidden;
+}
+section{
+    padding:10px 30px 30px 80px;
+    -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -moz-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -o-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:250px;
+    height:100%;
+    margin:0 0 0 -250px;
+    -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -moz-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -o-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+}
+nav ul{
+    width:200px;
+    height:100%;
+    padding:0 0 0 50px;
+    margin:0;
+    list-style:none;
+    background:#FFF9A5;
+    overflow:hidden;
+}
+nav li{
+    margin:0;
+}
+nav a{
+    color:#484A56;
+    font-size:1em;
+    font-family:'Montserrat', helvetica, arial, sans-serif;
+    font-weight: 400;
+    text-decoration:none;
+    display:block;
+    padding:12px 15px;
+    font-weight:300;
+    letter-spacing:2px;
+}
+nav a:hover{
+    background:#EAEBED;
+}
+label{
+    display:block;
+    font-family:'helvetica neue', helvetica, arial, sans-serif;
+    font-weight:700;
+    line-height:42px;
+    color:#fff;
+    text-align:center;
+    font-size:2em;
+    line-height:1.1em;
+    position:fixed;
+    top:50px;
+    left:60px;
+    -webkit-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -moz-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    -o-transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
+    transition: all 400ms cubic-bezier(0.680, -0.550, 0.265, 1.550); /* easeInOutBack */
+    z-index:500;
+}
+input[type="checkbox"]{
+    display:none;
+}
+input[type="checkbox"]:checked ~ nav{
+    margin:0 0 0 -50px;
+}
+input[type="checkbox"]:checked ~ label{
+    left:270px;
+}
+input[type="checkbox"]:checked ~ section{
+    -webkit-transform:translate3d(210px, 0, 0);
+    -moz-transform:translate3d(210px, 0, 0);
+    -o-transform:translate3d(210px, 0, 0);
+    transform:translate3d(210px, 0, 0);
+}
+svg {
+    transform: scale(1.5);
+}
+.index,.dailyPunch,.scheduleTrack,.information{
+    display: block;
+    width: 20px;
+    height: 20px;
+    color: #E86252;
+    float: left;
+    margin-right: 10px;
+}
+#chips {
+    position: absolute;
+    margin-left: -30px;
+    margin-top: 15px;
+}
+#burger {
+    display:block;
+}
+.index{
+    background: url('../images/主页.png') no-repeat;
+    background-size: 100% 100%;
+}
+.dailyPunch{
+    background: url("../images/打卡签到.png") no-repeat;
+    background-size: 100% 100%;
+}
+.scheduleTrack{
+    background: url("../images/轨迹.png") no-repeat;
+    background-size: 100% 100%;
+}
+.information{
+    background: url("../images/个人信息.png") no-repeat;
+    background-size: 100% 100%;
+}
+/*内容*/
+.content{
+    width: 900px;
+    margin: -50px auto 0;
+}
+
+
+span{
+    -webkit-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -moz-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -ms-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    -o-transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+    transition: all 250ms cubic-bezier(0.230, 1.000, 0.320, 1.000);
+}
+
+.list{
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-stle: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    text-transform: uppercase;
+    position: absolute;
+    margin-left: -120px;
+    top: 25%;
+}
+
+.list span{
+    display: block;
+    color: #fff;
+}
+
+.list dd>span:hover {
+    text-indent: 20px;
+}
+
+.list dt, .list dd {
+    text-indent: 10px;
+    line-height: 55px;
+    background: #E0FBAC;
+    height: 55px;
+    width: 270px;
+    color: #fff;
+}
+.list .No,.list .studentID,.list .address{
+    color: red;
+}
+.list dt {
+    /* Since we're hiding elements behind here, we need it in 3d */
+    -webkit-transform: translateZ(0.3px);
+    -moz-transform: translateZ(0.3px);
+    -ms-transform: translateZ(0.3px);
+    -o-transform: translateZ(0.3px);
+    transform: translateZ(0.3px);
+
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+}
+
+.list dd {
+
+    border-top: 1px dashed rgba(255,255,255,0.5);
+    line-height: 35px;
+    font-size: 11px;
+    height: 35px;
+    position: relative;
+}
+
+#submit {
+    border: none;
+    -webkit-transform: translateZ(100px);
+    -moz-transform: translateZ(100px);
+    -ms-transform: translateZ(100px);
+    -o-transform: translateZ(100px);
+    transform: translateZ(100px);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    border-radius: 3px;
+
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    line-height: 50px;
+    margin-left: -70px;
+    margin-top: -20px;
+    background: #2b2b2b;
+    text-align: center;
+    font-size: 12px;
+    position: absolute;
+    z-index: 1;
+    height: 50px;
+    bottom: 5%;
+    width: 140px;
+    color: #fff;
+    left: 50%;
+}
+
+#submit:hover {
+
+    background: #E42692;
+}
+
+.sashimi dt, .sashimi dd, .sashimi span
+{
+    background: #73C8A9;
+}
+
+.nigiri dt, .nigiri dd, .nigiri span
+{
+    background: #E32551;
+}
+.maki dt,.maki dd,.maki input
+{
+    background: #FFC219;
+}
+.maki input{
+    outline: none;
+    border: none;
+    width: 260px;
+    height: 100%;
+}
+.sashimi span:hover
+{
+    background: #61c19e;
+}
+.nigiri span:hover
+{
+    background: #d31b46;
+}
+.maki dd:hover,.maki input:hover{
+    background: #ffa502;
+}
+.maki dd:hover input{
+    background: #ffa502;
+}
+.nigiri {
+
+    -webkit-transform: perspective(1200px) rotateY(40deg) !important;
+    -moz-transform: perspective(1200px) rotateY(40deg) !important;
+    -ms-transform: perspective(1200px) rotateY(40deg) !important;
+    -o-transform: perspective(1200px) rotateY(40deg) !important;
+    transform: perspective(1200px) rotateY(40deg) !important;
+
+    -webkit-transform-origin: 110% 25%;
+    -moz-transform-origin: 110% 25%;
+    -ms-transform-origin: 110% 25%;
+    -o-transform-origin: 110% 25%;
+    transform-origin: 110% 25%;
+
+    left: 20%;
+}
+
+.maki {
+
+    -webkit-transform: perspective(600px) translateZ(1px) !important;
+    -moz-transform: perspective(600px) translateZ(1px) !important;
+    -ms-transform: perspective(600px) translateZ(1px) !important;
+    -o-transform: perspective(600px) translateZ(1px) !important;
+    transform: perspective(600px) translateZ(1px) !important;
+
+    left: 50%;
+}
+
+.sashimi {
+
+    -webkit-transform: perspective(1200px) rotateY(-40deg) !important;
+    -moz-transform: perspective(1200px) rotateY(-40deg) !important;
+    -ms-transform: perspective(1200px) rotateY(-40deg) !important;
+    -o-transform: perspective(1200px) rotateY(-40deg) !important;
+    transform: perspective(1200px) rotateY(-40deg) !important;
+
+    -webkit-transform-origin: -10% 25%;
+    -moz-transform-origin: -10% 25%;
+    -ms-transform-origin: -10% 25%;
+    -o-transform-origin: -10% 25%;
+    transform-origin: -10% 25%;
+
+    left: 80%;
+}
+
+.select_icon{
+    width: 12px;
+    height: 12px;
+    background: url("../images/下拉框.png");
+    background-size: 100% 100%;
+    z-index: 97;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin-top: -6px;
+    transition: transform 0.8s;
+}
+
+.select_content{
+    width: 180px;
+    position: absolute;
+    left: 50%;
+    top: 35px;
+    margin-left: -90px;
+    background: #3498db;
+    z-index: 99;
+    transform: scale(0,0);
+    transform-origin: 50% 0;
+    transition: transform 0.8s;
+    border-radius: 15px;
+}
+.select_content span{
+    display: block;
+    text-align: center;
+    border-bottom: 1px dashed rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+.select_content span:first-child{
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.select_content span:last-child{
+    border: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+.select_content span:hover{
+    background: #2980b9;
+}
+.spinner{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    cursor:pointer;
+}
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #FFC219 inset;
+}
